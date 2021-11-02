@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    Lab 2: Writing Driver Software for the Slide Switches and Push Buttons • ECEN 330
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ecen330/css/main.css>
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.typekit.net/jcn6ybb.css">
+
+<!-- <link rel="icon" type="image/png" sizes="96x96" href=/ecen330/icon/favicon-96x96.png>
+<link rel="icon" type="image/png" sizes="32x32" href=/ecen330/icon/favicon-32x32.png>
+<link rel="icon" type="image/png" sizes="16x16" href=/ecen330/icon/favicon-16x16.png> -->
+
+<script src="https://kit.fontawesome.com/624d595ebf.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ecen330/">
+                ECEN 330</a>
+        </div>
+        <div class="list-group list-group-flush sidebar-color">
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+        <div class="sidebar-heading">Setup</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/setup/step-1/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #1
+
+            </a>
+            
+            <a href="/ecen330/setup/linux/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: Linux
+
+            </a>
+            
+            <a href="/ecen330/setup/vm/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: VM
+
+            </a>
+            
+            <a href="/ecen330/setup/step-2/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #2
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Labs</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/labs/hello-world/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">1</span>
+                Hello World
+
+            </a>
+            
+            <a href="/ecen330/labs/switches-buttons/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">2</span>
+                Switches/Buttons Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/timer/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">3</span>
+                Timer Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/clock/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">4</span>
+                Clock
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">5</span>
+                Tic Tac Toe
+
+            </a>
+            
+            <a href="/ecen330/labs/simon/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">6</span>
+                Simon
+
+            </a>
+            
+            <a href="/ecen330/labs/project/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7</span>
+                Choose Your Own
+
+            </a>
+            
+            <a href="/ecen330/labs/wam/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7-old</span>
+                Whack-a-Mole
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Documentation</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/documentation/compiling/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Compiling and Running
+
+            </a>
+            
+            <a href="/ecen330/documentation/cmake/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                CMake
+
+            </a>
+            
+            <a href="/ecen330/documentation/headers/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Header Files
+
+            </a>
+            
+            <a href="/ecen330/documentation/submission/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Submitting Code
+
+            </a>
+            
+            <a href="/ecen330/documentation/vscode/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                VS Code Tips
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Other</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/other/kr-study-questions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                K&R Study Questions
+
+            </a>
+            
+            <a href="/ecen330/other/ta-calendar/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                TA Calendar
+
+            </a>
+            
+            <a href="/ecen330/other/coding-standard/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding Standard
+
+            </a>
+            
+            <a href="/ecen330/other/coding-state-machines/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding State Machines
+
+            </a>
+            
+            <a href="/ecen330/other/lab-breakdown/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Lab Grade Breakdown
+
+            </a>
+            
+            <a href="/ecen330/other/suggestions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Suggestions
+
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg border-bottom">
+        <button class="btn btn-brand" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://piazza.com/byu/fall2021/ecen330"><i class="far fa-question-circle"></i> Piazza</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/byu-cpe/ecen330/issues/new?labels=website&title=Updates to Lab 2: Writing Driver Software for the Slide Switches and Push Buttons page"><i
+                class="fab fa-github"></i> Suggest
+              Edits</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        <article class="page lab">
+    <h1 class="page-title" id="page-title">
+        Lab 2: Writing Driver Software for the Slide Switches and Push Buttons
+        
+    </h1>
+
+    <div class="page-content">
+        
+        <div class="lab-toc col-md-6 col-lg-5 bg-light">
+            <h4>Table of Contents</h4>
+            <ul>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#objectives">Objectives</a></li>
+  <li><a href="#preliminary">Preliminary</a>
+    <ul>
+      <li><a href="#schematic">Schematic</a></li>
+      <li><a href="#new-terminology">New Terminology</a></li>
+      <li><a href="#programming-stack">Programming Stack</a></li>
+      <li><a href="#gpio-and-register-based-access">GPIO and Register-Based Access</a></li>
+      <li><a href="#source-code">Source Code</a></li>
+      <li><a href="#compiling-lab2">Compiling Lab2</a></li>
+    </ul>
+  </li>
+  <li><a href="#implementation">Implementation</a></li>
+  <li><a href="#requirements">Requirements</a></li>
+  <li><a href="#submission-and-pass-off">Submission and Pass Off</a>
+    <ul>
+      <li><a href="#grade-breakdown">Grade Breakdown</a></li>
+    </ul>
+  </li>
+  <li><a href="#resources">Resources</a></li>
+</ul>
+
+        </div>
+        
+
+        <h2 id="overview">Overview</h2>
+<p>In this lab you will write and test driver software for the slide switches and push buttons that are on the 330 board. The schematic for these switches and push-buttons is shown on Page 22 of the <a href="/ecen330/media/lab1/zybo_rm_b_v6.pdf">ZYBO reference manual</a>. The switches and push-buttons are items 9 and 13, respectively, shown in the photo of the Zybo board (Page 3 of the Zybo reference manual and duplicated below).</p>
+
+<p><img src="/ecen330/media/lab2/zyboannotated.jpg" width="500" alt="Zybo schematic" /></p>
+
+<p>One you have completed the driver software, you will create test programs to verify that your driver code works correctly.</p>
+
+<p>The switch test program will turn on LEDs corresponding to the switches that are in the UP position.  The test will end once all four switches are UP.</p>
+<iframe width="560" height="315" allow="fullscreen" src="https://www.youtube.com/embed/PaIXUnRUg-4"> </iframe>
+
+<p>The button test program will draw colored squares to the LCD dependent on which button is pressed, as shown in the following video. The test will end when all four buttons are pressed simultaneously.  On the emulator, you can press multiple buttons at once using the SHIFT key.</p>
+<iframe width="560" height="315" allow="fullscreen" src="https://www.youtube.com/embed/QYQlwwn_CJs"> </iframe>
+
+<h2 id="objectives">Objectives</h2>
+<ul>
+  <li>Gain experience with commercial documentation.</li>
+  <li>Understand how the GPIO IP block functions and write low-level code to communicate with it (instead of using the functions provided by <em>xgpio.h</em>).</li>
+  <li>Learn how to write low-level software to interface with buttons and switches.</li>
+  <li>Practice applying the class coding standard.</li>
+  <li>Write reusable code that you may use in later labs.</li>
+  <li>Write test code that demonstrates the correctness of your implementation and that demonstrates how to use the button/switch software driver that you wrote.</li>
+  <li>Gain additional practice with the graphic library and the LCD.</li>
+</ul>
+
+<h2 id="preliminary">Preliminary</h2>
+
+<h3 id="schematic">Schematic</h3>
+<p>The schematic for the switches is also shown below (Page 22 of Zybo reference manual).
+<img src="/ecen330/media/lab2/zyboswitchbuttonschematic.png" width="500" alt="Zybo buttons and switches schematic" /></p>
+
+<p><strong>Question:</strong> What is the logic value of the pin attached to the push-button when the button is pushed? When it is released?</p>
+
+<h3 id="new-terminology">New Terminology</h3>
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Memory_map">memory map</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Address_bus">address bus</a></li>
+  <li>data bus</li>
+  <li>IP</li>
+  <li>Register</li>
+</ul>
+
+<h3 id="programming-stack">Programming Stack</h3>
+
+<p>We often refer to <em>stacks</em> when we talk about computing systems. A stack is a conceptual term that refers to multiple layers of software stacked one upon the other. See <a href="/ecen330/programming-stack/">Programming Stack</a> for more information on how this terminology applies to this lab.</p>
+
+<h3 id="gpio-and-register-based-access">GPIO and Register-Based Access</h3>
+
+<p>When using programmable processors such as microprocessors, etc., we access low-level hardware via registers. See <a href="/ecen330/gpio-registers/">the GPIO and Registers page</a> to understand how you will access the registers in the GPIO (General Purpose Input/Output) module.</p>
+
+<h3 id="source-code">Source Code</h3>
+
+<p>Review the <a href="https://github.com/byu-cpe/ecen330_student/blob/master/drivers/buttons.h">buttons.h</a> and <a href="https://github.com/byu-cpe/ecen330_student/blob/master/drivers/switches.h">switches.h</a> files which are provided in your repository.</p>
+
+<h3 id="compiling-lab2">Compiling Lab2</h3>
+
+<p>You are already provided a <a href="https://github.com/byu-cpe/ecen330_student/blob/master/lab2/CMakeLists.txt">CMakeLists.txt</a> file for this lab that will compile the Lab 2 executable.  You will see that it is almost the same as Lab 1 file, except that line 2 also includes the <em>buttons_switches</em> library.</p>
+
+<p>The software you write for this lab will be drivers for the buttons and switches.  This software will be reused in later labs, so it will be compiled into a library that can be used by multiple applications.  This library, called <em>buttons_switches</em>, will be located in the <a href="https://github.com/byu-cpe/ecen330_student/tree/master/drivers">drivers</a> directory.  You are already given a <a href="https://github.com/byu-cpe/ecen330_student/blob/master/drivers/CMakeLists.txt">CMakeLists.txt</a> file in this directory that will compile your <em>buttons.c</em> and <em>switches.c</em> code into the ‘‘buttons_switches’’ library.</p>
+
+<p>The only changes you need to make for this lab is to instruct the top-level <a href="https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt">CMakeLists.txt</a> file to enter both of these directories and process those CMakeLists.txt files.  Add  <code class="language-plaintext highlighter-rouge">add_subdirectory(lab2)</code> and <code class="language-plaintext highlighter-rouge">add_subdirectory(drivers)</code> statements to the top-level CMakeLists.txt, after the <code class="language-plaintext highlighter-rouge">add_subdirectory(lab1)</code> statement.</p>
+
+<p>You should read the page <a href="/ecen330/documentation/cmake/">About CMake files</a> to help understand the provided CMake files.</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>The majority of your code for this lab will be placed in two files you create: <em>buttons.c</em>, <em>switches.c</em>. The “buttons” files will contain the code necessary to access the push-buttons while the “switches” will contain the code necessary to access the slide switches.  <strong>These files must be placed in your ‘‘drivers’’ folder.</strong></p>
+
+<h2 id="requirements">Requirements</h2>
+<ul>
+  <li>You must use the provided <a href="https://github.com/byu-cpe/ecen330_student/tree/master/drivers">.h files</a> as is (these files are already in your repository). <strong>No modifications are necessary or allowed.</strong> Make sure you have reviewed the page on <a href="/ecen330/documentation/headers/">including header files in your code</a>.</li>
+  <li>You are provided a simple <a href="https://github.com/byu-cpe/ecen330_student/blob/master/lab2/main.c">main.c</a> file that will test your buttons and switches code. <strong>No modifications are necessary or allowed.</strong></li>
+  <li>You must follow the <a href="/ecen330/other/coding-standard/">coding standard</a>.</li>
+  <li>You must implement the required functions for the buttons and switches drivers (see below).</li>
+  <li><em>switches_runTest()</em> will illuminate the LEDs on the ZYBO board above the slide switches.  Make sure to <em>#include “<a href="https://github.com/byu-cpe/ecen330_student/blob/master/include/leds.h">leds.h</a>”</em> to access the necessary LED helper functions. Use these functions to control the LEDs. <em>switches_runTest()</em> will run until all of the slide switches are slid up at which point it will terminate.</li>
+  <li><em>buttons_runTest()</em> will use the LCD display to demonstrate that the buttons are working (see the video referenced below). <em>buttons_runTest()</em> will run until all of the push-buttons are pressed simultaneously, similar to switches. When the 4 push-buttons are simultaneously pressed, this function returns.</li>
+  <li>In <em>buttons_test()</em> you must only draw the rectangle once for each button press and erase it once for each button release. It is OK if there is some button bouncing but continuously drawing or erasing a rectangle while in an infinite while-loop is not allowed. TAs will inspect your code to verify this. Also, continuously drawing rectangles at a high rate will often cause flashing on all but the fastest VMs.</li>
+  <li>Write helper functions for accessing the GPIO registers.  These functions should NOT be declared in your .h files, but rather at the top of the appropriate .c file:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">buttons_readGpioRegister(int32_t offset)</code>,</li>
+      <li><code class="language-plaintext highlighter-rouge">buttons_writeGpioRegister(int32_t offset, int32_t value)</code>,</li>
+      <li><code class="language-plaintext highlighter-rouge">switches_readGpioRegister(int32_t offset)</code>,</li>
+      <li><code class="language-plaintext highlighter-rouge">switches_writeGpioRegister(int32_t offset, int32_t value)</code>.</li>
+    </ul>
+  </li>
+  <li>Watch the provided videos to see what your test functions should look like once implemented (see above). For the button-test note that the rectangles that are drawn on the display must not flicker during the test.</li>
+</ul>
+
+<h2 id="submission-and-pass-off">Submission and Pass Off</h2>
+
+<p>For each lab, you will follow the <a href="/ecen330/documentation/submission/">instructions on submitting source code</a> to submit your code.</p>
+
+<p>The TAs will compile your code and run the provided <a href="https://github.com/byu-cpe/ecen330_student/blob/master/lab2/main.c">main.c</a> program, which will run both of your <em>runTest()</em> functions.  Do not modify main.c.</p>
+
+<h3 id="grade-breakdown">Grade Breakdown</h3>
+<ul>
+  <li>30% Code quality and adherence to the coding standard. You are allowed 10 freebies for this lab.</li>
+  <li>70% Pass off. If your code works well and shows no bugs, you should get the full 70%.</li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li><a href="/ecen330/media/lab2/ds744_axi_gpio.pdf">GPIO documentation</a></li>
+  <li><a href="/ecen330/media/lab1/zybo_rm_b_v6.pdf">ZYBO Reference Manual</a></li>
+  <li><a href="/ecen330/media/lab2/zybo_sch.pdf">ZYBO Board Schematics</a></li>
+</ul>
+
+
+    </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ecen330/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>

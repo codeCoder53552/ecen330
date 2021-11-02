@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    Lab 5: Tic Tac Toe • ECEN 330
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ecen330/css/main.css>
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.typekit.net/jcn6ybb.css">
+
+<!-- <link rel="icon" type="image/png" sizes="96x96" href=/ecen330/icon/favicon-96x96.png>
+<link rel="icon" type="image/png" sizes="32x32" href=/ecen330/icon/favicon-32x32.png>
+<link rel="icon" type="image/png" sizes="16x16" href=/ecen330/icon/favicon-16x16.png> -->
+
+<script src="https://kit.fontawesome.com/624d595ebf.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ecen330/">
+                ECEN 330</a>
+        </div>
+        <div class="list-group list-group-flush sidebar-color">
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+        <div class="sidebar-heading">Setup</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/setup/step-1/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #1
+
+            </a>
+            
+            <a href="/ecen330/setup/linux/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: Linux
+
+            </a>
+            
+            <a href="/ecen330/setup/vm/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: VM
+
+            </a>
+            
+            <a href="/ecen330/setup/step-2/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #2
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Labs</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/labs/hello-world/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">1</span>
+                Hello World
+
+            </a>
+            
+            <a href="/ecen330/labs/switches-buttons/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">2</span>
+                Switches/Buttons Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/timer/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">3</span>
+                Timer Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/clock/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">4</span>
+                Clock
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">5</span>
+                Tic Tac Toe
+
+            </a>
+            
+            <a href="/ecen330/labs/simon/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">6</span>
+                Simon
+
+            </a>
+            
+            <a href="/ecen330/labs/project/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7</span>
+                Choose Your Own
+
+            </a>
+            
+            <a href="/ecen330/labs/wam/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7-old</span>
+                Whack-a-Mole
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Documentation</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/documentation/compiling/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Compiling and Running
+
+            </a>
+            
+            <a href="/ecen330/documentation/cmake/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                CMake
+
+            </a>
+            
+            <a href="/ecen330/documentation/headers/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Header Files
+
+            </a>
+            
+            <a href="/ecen330/documentation/submission/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Submitting Code
+
+            </a>
+            
+            <a href="/ecen330/documentation/vscode/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                VS Code Tips
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Other</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/other/kr-study-questions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                K&R Study Questions
+
+            </a>
+            
+            <a href="/ecen330/other/ta-calendar/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                TA Calendar
+
+            </a>
+            
+            <a href="/ecen330/other/coding-standard/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding Standard
+
+            </a>
+            
+            <a href="/ecen330/other/coding-state-machines/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding State Machines
+
+            </a>
+            
+            <a href="/ecen330/other/lab-breakdown/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Lab Grade Breakdown
+
+            </a>
+            
+            <a href="/ecen330/other/suggestions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Suggestions
+
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg border-bottom">
+        <button class="btn btn-brand" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://piazza.com/byu/fall2021/ecen330"><i class="far fa-question-circle"></i> Piazza</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/byu-cpe/ecen330/issues/new?labels=website&title=Updates to Lab 5: Tic Tac Toe page"><i
+                class="fab fa-github"></i> Suggest
+              Edits</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        <article class="page lab">
+    <h1 class="page-title" id="page-title">
+        Lab 5: Tic Tac Toe
+        
+    </h1>
+
+    <div class="page-content">
+        
+        <div class="lab-toc col-md-6 col-lg-5 bg-light">
+            <h4>Table of Contents</h4>
+            <ul>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#objectives">Objectives</a></li>
+  <li><a href="#preliminary">Preliminary</a>
+    <ul>
+      <li><a href="#building-this-lab">Building this Lab</a></li>
+      <li><a href="#program-organization">Program Organization</a></li>
+      <li><a href="#implementation">Implementation</a></li>
+    </ul>
+  </li>
+  <li><a href="#submission--pass-off">Submission &amp; Pass Off</a>
+    <ul>
+      <li><a href="#grade-breakdown">Grade Breakdown</a></li>
+    </ul>
+  </li>
+</ul>
+
+        </div>
+        
+
+        <p><img src="/ecen330/media/lab5/tictactoe.jpg" width="400" alt="Tic tac toe board on LCD" /></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>For our next lab, we will implement a program that can play an <strong>unbeatable</strong> game of Tic-Tac-Toe. This project will consist of three individual milestones that you will pass off one-by-one (display, algorithm, control). That way you can get partial credit if you don’t complete the entire lab. <strong>A word of warning: some of you may find this lab very challenging.</strong> You will implement the algorithm for the computer player using a recursive minimax search. The algorithm is not that complex but recursive algorithms can be a challenge to debug so start early to give yourself extra time. If you are a little squeamish about recursion, make sure to start early.</p>
+
+<p>This lab will consist of three milestones:</p>
+<ul>
+  <li><strong>Algorithm</strong>. You will write the software that makes it impossible to beat the computer.</li>
+  <li><strong>Display</strong>. You will write the routines that implement the Tic-Tac-Toe board and the drawing of the X’s and the O’s.</li>
+  <li><strong>Control</strong>. You will implement the game control using the state-machine concepts discussed in the class, similar to what you did for the clock lab.</li>
+</ul>
+
+<p>You will implement and test the Display and Algorithm milestones separately. The Control milestone will bring everything together to implement the entire game.</p>
+
+<h2 id="objectives">Objectives</h2>
+<ul>
+  <li>Practice developing your own state diagrams.</li>
+  <li>More practice implementing synchronous state machines.</li>
+  <li>Practice implementing and debugging your synchronous controller state machine.</li>
+  <li>Gain more experience using the touch-controller and graphics library.</li>
+  <li>Develop your own state-diagram for control and implement it using the synchronous state-machine techniques discussed in class.</li>
+  <li>Implement a recursive mini-max algorithm and use it to create an unbeatable game of tic-tac-toe.</li>
+</ul>
+
+<h2 id="preliminary">Preliminary</h2>
+
+<h3 id="building-this-lab">Building this Lab</h3>
+<p>All of your code for this lab will written in the <em>lab5</em> directory.  You will need to create a <em>CMakeLists.txt</em> file in this directory to build the clock application and link it to any necessary libraries.</p>
+
+<h3 id="program-organization">Program Organization</h3>
+<p>The program is divided into three main parts or packages:</p>
+<ul>
+  <li>minimax: provides the algorithm that you will need to create your unbeatable game.</li>
+  <li>ticTacToeDisplay: provides the functions to draw the board and players “X” and “O”.</li>
+  <li>ticTacToeControl: provides the top-level control of the game, invoking minimax and the display functions as necessary.</li>
+</ul>
+
+<h3 id="implementation">Implementation</h3>
+<p>Your program will be implemented in three separate milestones that correspond to the three different packages that you will implement: ticTacToeDisplay, minimax, ticTacToeControl. Each milestone will be checked by the TAs separately and the requirements are stated at the end of the description for each of the milestones below.</p>
+
+<p>Like previous labs, you are provided with a <em>main.c</em> file that will run the different milestones.  Do not change the file, except to uncomment the appropriate line to run the desired milestone.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>////////////////////////////////////////////////////////////////////////////////
+// Uncomment one of the following lines to run Milestone 1, 2, or 3    /////////
+////////////////////////////////////////////////////////////////////////////////
+// #define RUN_PROGRAM MILESTONE_1
+// #define RUN_PROGRAM MILESTONE_2
+// #define RUN_PROGRAM MILESTONE_3 &lt;/code&gt;
+</code></pre></div></div>
+
+<ol>
+  <li><a href="/ecen330/tictactoe-m1/">Milestone 1: Minimax Algorithm Details and Pass-Off</a></li>
+  <li><a href="/ecen330/tictactoe-m2/">Milestone 2: Minimax Display Details and Pass-Off</a></li>
+  <li><a href="/ecen330/tictactoe-m3/">Milestone 3: Minimax Game and Control Details and Pass-Off</a></li>
+</ol>
+
+<h2 id="submission--pass-off">Submission &amp; Pass Off</h2>
+<p>Follow the <a href="/ecen330/documentation/submission/">instructions on submitting source code</a> to submit your code.</p>
+
+<h3 id="grade-breakdown">Grade Breakdown</h3>
+<ul>
+  <li>Milestone 1 (algorithm): 25%
+    <ul>
+      <li>-10% overall, if you don’t create and print the output of the 10 extra test boards.</li>
+    </ul>
+  </li>
+  <li>Milestone 2 (display): 10%</li>
+  <li>Milestone 3 (control): 35%
+    <ul>
+      <li>-10% overall, if you miss more than 1 interrupt</li>
+      <li>-15% overall, if your game is not unbeatable</li>
+      <li>-10% overall, if you are unable to make your game play at the same speed as the video</li>
+      <li>-10% overall, if your game allows strange game play: overwriting of X’s and O’s, cheating, playing after the game is over, etc.</li>
+    </ul>
+  </li>
+  <li>Code Quality (adhering to the coding standard): 30%</li>
+</ul>
+
+
+    </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ecen330/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>

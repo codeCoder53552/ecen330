@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    Interval Timer • ECEN 330
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ecen330/css/main.css>
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.typekit.net/jcn6ybb.css">
+
+<!-- <link rel="icon" type="image/png" sizes="96x96" href=/ecen330/icon/favicon-96x96.png>
+<link rel="icon" type="image/png" sizes="32x32" href=/ecen330/icon/favicon-32x32.png>
+<link rel="icon" type="image/png" sizes="16x16" href=/ecen330/icon/favicon-16x16.png> -->
+
+<script src="https://kit.fontawesome.com/624d595ebf.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ecen330/">
+                ECEN 330</a>
+        </div>
+        <div class="list-group list-group-flush sidebar-color">
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+        <div class="sidebar-heading">Setup</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/setup/step-1/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #1
+
+            </a>
+            
+            <a href="/ecen330/setup/linux/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: Linux
+
+            </a>
+            
+            <a href="/ecen330/setup/vm/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: VM
+
+            </a>
+            
+            <a href="/ecen330/setup/step-2/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #2
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Labs</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/labs/hello-world/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">1</span>
+                Hello World
+
+            </a>
+            
+            <a href="/ecen330/labs/switches-buttons/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">2</span>
+                Switches/Buttons Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/timer/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">3</span>
+                Timer Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/clock/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">4</span>
+                Clock
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">5</span>
+                Tic Tac Toe
+
+            </a>
+            
+            <a href="/ecen330/labs/simon/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">6</span>
+                Simon
+
+            </a>
+            
+            <a href="/ecen330/labs/project/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7</span>
+                Choose Your Own
+
+            </a>
+            
+            <a href="/ecen330/labs/wam/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7-old</span>
+                Whack-a-Mole
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Documentation</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/documentation/compiling/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Compiling and Running
+
+            </a>
+            
+            <a href="/ecen330/documentation/cmake/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                CMake
+
+            </a>
+            
+            <a href="/ecen330/documentation/headers/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Header Files
+
+            </a>
+            
+            <a href="/ecen330/documentation/submission/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Submitting Code
+
+            </a>
+            
+            <a href="/ecen330/documentation/vscode/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                VS Code Tips
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Other</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/other/kr-study-questions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                K&R Study Questions
+
+            </a>
+            
+            <a href="/ecen330/other/ta-calendar/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                TA Calendar
+
+            </a>
+            
+            <a href="/ecen330/other/coding-standard/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding Standard
+
+            </a>
+            
+            <a href="/ecen330/other/coding-state-machines/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding State Machines
+
+            </a>
+            
+            <a href="/ecen330/other/lab-breakdown/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Lab Grade Breakdown
+
+            </a>
+            
+            <a href="/ecen330/other/suggestions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Suggestions
+
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg border-bottom">
+        <button class="btn btn-brand" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://piazza.com/byu/fall2021/ecen330"><i class="far fa-question-circle"></i> Piazza</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/byu-cpe/ecen330/issues/new?labels=website&title=Updates to Interval Timer page"><i
+                class="fab fa-github"></i> Suggest
+              Edits</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        <article class="page">
+  <h1 class="page-title" id="page-title">
+    
+    Interval Timer
+  </h1>
+
+  <div class="page-content">
+    
+
+    <p>The hardware timers that you will access are LogiCORE IP AXI Timer (axi_timer) (v1.03a) provided by Xilinx. Here’s a block diagram of the AXI timer taken from the Xilinx documentation. Please refer to the Xilinx documentation for functional details of the AXI timer (see Resources Section below).</p>
+
+<p><img src="/ecen330/media/lab3/axitimerblockdiagram2.jpg" width="600" alt="AXI Timer block diagram" /></p>
+
+<p>I inserted three of these into the bit-stream and they are named: <em>timer_0</em>, <em>timer_1</em>, and <em>timer_2</em>, as shown below.</p>
+
+<p><img src="/ecen330/media/lab3/threeintervaltimerdiagram.jpg" width="600" alt="Three interval timers on AXI bus" /></p>
+
+<p>Here’s an excerpt from the <em>xparameters.h</em> file with definitions related to these three timers. As you should recall from Lab 2, the base address is your main concern.</p>
+
+<p><strong>NOTE: Do not copy the code below into your own code. Just include xparameters.h and use the defined values, e.g., XPAR_AXI_TIMER_2_BASEADDR.</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* Definitions for driver TMRCTR */
+#define XPAR_XTMRCTR_NUM_INSTANCES 3
+
+/* Definitions for peripheral AXI_TIMER_0 */
+#define XPAR_AXI_TIMER_0_DEVICE_ID 0
+#define XPAR_AXI_TIMER_0_BASEADDR 0x42800000
+#define XPAR_AXI_TIMER_0_HIGHADDR 0x4280FFFF
+#define XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ 100000000
+
+
+/* Definitions for peripheral AXI_TIMER_1 */
+#define XPAR_AXI_TIMER_1_DEVICE_ID 1
+#define XPAR_AXI_TIMER_1_BASEADDR 0x42840000
+#define XPAR_AXI_TIMER_1_HIGHADDR 0x4284FFFF
+#define XPAR_AXI_TIMER_1_CLOCK_FREQ_HZ 100000000
+
+
+/* Definitions for peripheral AXI_TIMER_2 */
+#define XPAR_AXI_TIMER_2_DEVICE_ID 2
+#define XPAR_AXI_TIMER_2_BASEADDR 0x42880000
+#define XPAR_AXI_TIMER_2_HIGHADDR 0x4288FFFF
+#define XPAR_AXI_TIMER_2_CLOCK_FREQ_HZ 100000000
+</code></pre></div></div>
+
+<h2 id="resources">Resources</h2>
+<p>These timers are fully described in Xilinx’s documentation.</p>
+
+<ul>
+  <li><a href="/ecen330/media/lab3/axi_timer_ds764.pdf">Xilinx Timer Documentation</a></li>
+</ul>
+
+<p>If the highlighting does not appear, make sure to read at least the following pages: 1, 2-3 (through Characteristics), 4-5 (Characteristics), 7 (Figure 2), and 11-14 (Register Definitions).</p>
+
+<h2 id="overview-of-timer-hardware">Overview of Timer Hardware</h2>
+
+<p>The timer hardware is pretty complex and provides lots of functionality. However, we will only use them in their simplest mode as interval timers. As such, you need to carefully study at least the highlighted sections of the Xilinx documentation.</p>
+
+<p>As discussed in the manual, the timer consists of two identical sections each containing a 32-bit counter and associated registers. The two counters can be cascaded to form a single 64-bit counter. This is referred to as cascade mode. In cascade mode, almost all of the control is done via a single control register (<em>TCSR0</em>) as the other control registers are mostly ignored in this mode. The counters can be configured to count up or down, you will configure them to count up. This makes the most sense for a simple timer.</p>
+
+<p>You will need to access the following registers in the timer hardware:</p>
+<ul>
+  <li><em>TCSR0</em>: this control/status register is used to control the cascaded 64-bit counter and to load values into the 32-bit counter.</li>
+  <li><em>TCSR1</em>: you will use this control/status register only to load a 0 into counter 1 to reset it.</li>
+  <li><em>TLR0</em>: you will need to set both 32-bit counters to zero in order to reset the timer. You do this for counter 0 by loading a 0 into this register and loading the contents of TLR0 into the counter.</li>
+  <li><em>TLR1</em>: you load a 0 into this and load the contents of TLR1 into counter 1 to reset it and set it to 0 (just like counter 0).</li>
+  <li><em>TCR0</em>: you read this register to find out the current value of counter 0.</li>
+  <li>
+    <p><em>TCR1</em>: you read this register to find out the current value of counter 1.</p>
+  </li>
+  <li>To initialize the counters, you should do the following:
+    <ul>
+      <li>write a 0 to the <em>TCSR0</em> register.</li>
+      <li>write a 0 to the <em>TCSR1</em> register.</li>
+      <li>set the <em>CASC</em> bit and clear the <em>UDT0</em> bit in the <em>TCSR0</em> register (cascade mode and up counting).</li>
+    </ul>
+  </li>
+  <li>To store a 0 into counter 0, do the following:
+    <ul>
+      <li>write a 0 into the <em>TLR0</em> register.</li>
+      <li>write a 1 into the <em>LOAD0</em> bit in the <em>TCSR0</em>.</li>
+    </ul>
+  </li>
+  <li>To store a 0 into counter 1, do the following:
+    <ul>
+      <li>write a 0 into the <em>TLR1</em> register.</li>
+      <li>write a 1 into the <em>LOAD1</em> bit of the <em>TCSR1</em> register.</li>
+    </ul>
+  </li>
+  <li>To start the cascaded counter:
+    <ul>
+      <li>write a 1 to the <em>ENT0</em> bit of the <em>TCSR0</em> register. When you do this, you must not disturb the other bits in <em>TCSR0</em>.</li>
+    </ul>
+  </li>
+  <li>To stop the cascaded counter:
+    <ul>
+      <li>clear the <em>ENT0</em> bit in the <em>TCSR0</em> register. Make sure not to clear out the <em>CASC</em> bit when you do this (or you will need to restore it).</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="additional-notes">Additional Notes</h3>
+<ul>
+  <li>After loading the counters with 0s to reset them, you must re-initialize them (see Step 1 above). In particular, make sure that you clear the load bit for both counters.</li>
+  <li>The process for reading the two 32-bit counters and reassembling them into a single 64-bit number is described on Page 5 of the documentation.</li>
+  <li>Search the <em>xparameters.h</em> file to find out the frequency for the timers. Always use the provided <em>#define</em>s as they are provided by <em>xparameters.h</em>. Do not use the actual numerical constants.</li>
+</ul>
+
+
+  </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ecen330/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    Lab 1: Hello World on the 330 Board • ECEN 330
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ecen330/css/main.css>
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.typekit.net/jcn6ybb.css">
+
+<!-- <link rel="icon" type="image/png" sizes="96x96" href=/ecen330/icon/favicon-96x96.png>
+<link rel="icon" type="image/png" sizes="32x32" href=/ecen330/icon/favicon-32x32.png>
+<link rel="icon" type="image/png" sizes="16x16" href=/ecen330/icon/favicon-16x16.png> -->
+
+<script src="https://kit.fontawesome.com/624d595ebf.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ecen330/">
+                ECEN 330</a>
+        </div>
+        <div class="list-group list-group-flush sidebar-color">
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+        <div class="sidebar-heading">Setup</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/setup/step-1/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #1
+
+            </a>
+            
+            <a href="/ecen330/setup/linux/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: Linux
+
+            </a>
+            
+            <a href="/ecen330/setup/vm/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: VM
+
+            </a>
+            
+            <a href="/ecen330/setup/step-2/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #2
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Labs</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/labs/hello-world/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">1</span>
+                Hello World
+
+            </a>
+            
+            <a href="/ecen330/labs/switches-buttons/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">2</span>
+                Switches/Buttons Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/timer/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">3</span>
+                Timer Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/clock/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">4</span>
+                Clock
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">5</span>
+                Tic Tac Toe
+
+            </a>
+            
+            <a href="/ecen330/labs/simon/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">6</span>
+                Simon
+
+            </a>
+            
+            <a href="/ecen330/labs/project/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7</span>
+                Choose Your Own
+
+            </a>
+            
+            <a href="/ecen330/labs/wam/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7-old</span>
+                Whack-a-Mole
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Documentation</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/documentation/compiling/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Compiling and Running
+
+            </a>
+            
+            <a href="/ecen330/documentation/cmake/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                CMake
+
+            </a>
+            
+            <a href="/ecen330/documentation/headers/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Header Files
+
+            </a>
+            
+            <a href="/ecen330/documentation/submission/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Submitting Code
+
+            </a>
+            
+            <a href="/ecen330/documentation/vscode/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                VS Code Tips
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Other</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/other/kr-study-questions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                K&R Study Questions
+
+            </a>
+            
+            <a href="/ecen330/other/ta-calendar/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                TA Calendar
+
+            </a>
+            
+            <a href="/ecen330/other/coding-standard/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding Standard
+
+            </a>
+            
+            <a href="/ecen330/other/coding-state-machines/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding State Machines
+
+            </a>
+            
+            <a href="/ecen330/other/lab-breakdown/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Lab Grade Breakdown
+
+            </a>
+            
+            <a href="/ecen330/other/suggestions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Suggestions
+
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg border-bottom">
+        <button class="btn btn-brand" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://piazza.com/byu/fall2021/ecen330"><i class="far fa-question-circle"></i> Piazza</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/byu-cpe/ecen330/issues/new?labels=website&title=Updates to Lab 1: Hello World on the 330 Board page"><i
+                class="fab fa-github"></i> Suggest
+              Edits</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        <article class="page lab">
+    <h1 class="page-title" id="page-title">
+        Lab 1: Hello World on the 330 Board
+        
+    </h1>
+
+    <div class="page-content">
+        
+        <div class="lab-toc col-md-6 col-lg-5 bg-light">
+            <h4>Table of Contents</h4>
+            <ul>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#objectives">Objectives</a></li>
+  <li><a href="#preliminary">Preliminary</a>
+    <ul>
+      <li><a href="#computer-setup">Computer Setup</a></li>
+      <li><a href="#compile-and-run-the-lab1-code">Compile and Run the Lab1 Code</a></li>
+    </ul>
+  </li>
+  <li><a href="#implementation">Implementation</a></li>
+  <li><a href="#submission-and-pass-off">Submission and Pass Off</a>
+    <ul>
+      <li><a href="#grade-breakdown">Grade Breakdown</a></li>
+    </ul>
+  </li>
+  <li><a href="#resources">Resources</a></li>
+  <li><a href="#suggestions">Suggestions</a></li>
+</ul>
+
+        </div>
+        
+
+        <h2 id="overview">Overview</h2>
+<p>This lab will show you how to compile and run a simple program on the Zybo board (or using the Zybo board emulator).</p>
+
+<p>You will be given a program that prints “Hello World” to the console, as well as on the LCD screen as shown below:</p>
+
+<p><img src="/ecen330/media/lab1/helloworld.jpg" alt="LCD screen showing 'Hello World' text" /></p>
+
+<p>You will then modify the program to draw some graphics on the LCD screen as shown here:</p>
+
+<p><img src="/ecen330/media/lab1/shapes.jpg" alt="LCD screen showing arrangement of four shapes" /></p>
+
+<h2 id="objectives">Objectives</h2>
+<ul>
+  <li>Learn how to compile and run programs on the 330 board/emulator.</li>
+  <li>Introduce the CMake build system, and the Visual Studio Code editor.</li>
+  <li>Become familiar with the graphics routines that are available for use with the LCD display.</li>
+  <li>Learn some of the issues with printf().</li>
+</ul>
+
+<h2 id="preliminary">Preliminary</h2>
+
+<h3 id="computer-setup">Computer Setup</h3>
+
+<p>Complete <a href="/ecen330/setup/step-1/">Setup Step #1</a> and <a href="/ecen330/setup/step-2/">Setup Step #2</a>, linked to on the left-hand pane.  This will take some time, so start early.</p>
+
+<p><ins><strong>Follow all steps carefully.  Make sure everything if working before proceeding.  If you get stuck during a setup step, DO NOT SKIP IT.  Ask for help on Piazza</strong></ins>.</p>
+
+<h3 id="compile-and-run-the-lab1-code">Compile and Run the Lab1 Code</h3>
+
+<p>Carefully read the entire page on <a href="/ecen330/documentation/compiling/">Compiling Code</a>.  <strong>Follow the steps to compile the Lab1 code and run it on the board or emulator.</strong></p>
+
+<h2 id="implementation">Implementation</h2>
+<ol>
+  <li>When you provide characters to the <em>printf</em> function,  the characters are temporarily stored in a buffer, and then output to the terminal (also called <em>flushed</em>) in groups.  Normally the buffer is flushed at every new line character, but also when the program ends.
+    <ul>
+      <li>Modify the first <em>hello world</em> program and remove the <code class="language-plaintext highlighter-rouge">\n</code> from the string used in the <em>printf</em> function and recompile and execute the program. What happens? Does <em>hello world!</em> still appear in the console?</li>
+      <li>Now add a <code class="language-plaintext highlighter-rouge">while (1);</code> statement after the printf so that your program never ends.  Recompile and execute.  Does <em>hello world!</em> still appear in the console?</li>
+    </ul>
+
+    <p><em>This is just for your own experimentation.  You can remove these changes now.</em></p>
+  </li>
+  <li>Read the graphics documentation and then modify <em>main.c</em> so that it shows the graphics from the picture above (both triangles are yellow).</li>
+</ol>
+
+<h2 id="submission-and-pass-off">Submission and Pass Off</h2>
+<p>For every lab you will follow the same submission instructions, provided at the <a href="/ecen330/documentation/submission/">Submitting Source Code</a> page.</p>
+
+<h3 id="grade-breakdown">Grade Breakdown</h3>
+<ul>
+  <li>Pass-off (ie, correct functionality): 100%</li>
+  <li>Coding standard: 0%
+    <ul>
+      <li>You will still receive a coding standard grade out of 30 points, so that you can get feedback on your adherence to the coding standard; however, it won’t affect your grade.</li>
+      <li>Read over the <a href="/ecen330/other/coding-standard/">coding standard</a>, including the section at the bottom that discusses how your code is graded against the coding standard.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li><a href="/ecen330/media/lab1/zybo_rm_b_v6.pdf">ZYBO Board Documentation</a> The ZYBO board is commercially available from digilentinc.com.</li>
+  <li><a href="/ecen330/documentation/vscode/">VS Code Tips</a></li>
+  <li><a href="/ecen330/media/lab1/adafruit-gfx-graphics-library.pdf">Graphics Library Documentation</a>
+    <ul>
+      <li>This is a description of the graphics software that is available for use with the 330 board. I ported over this software from Adafruit (they sell the LCD panel that is mounted on the 330 board).</li>
+      <li>If you add the prefix “display_” to the function names described in this document, most (not quite all) of the functions are available for use with the ZYBO board, e.g., <code class="language-plaintext highlighter-rouge">drawLine()</code> becomes <code class="language-plaintext highlighter-rouge">display_drawLine()</code>.</li>
+      <li>Take a look at <a href="https://github.com/byu-cpe/ecen330_student/blob/master/include/display.h">include/display.h</a>. Also, note that <em>DISPLAY_WIDTH</em> and <em>DISPLAY_HEIGHT</em> are defined in display.h to be the correct values for height and width of the display. <em>display.h</em> is also listed in the source-code section for your convenience.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="suggestions">Suggestions</h2>
+<ul>
+  <li>Carefully read <strong>every word</strong> of the lab description. These lab descriptions have been refined over many years based upon student feedback. In most cases, the answers to your questions are usually present in the lab description. It is good practice to become very skilled at reading documentation as you will find that there are no TAs in industry. In general, students who read the lab description very carefully <strong>before coding anything</strong> complete the lab much more quickly than those who tend to scan the description and jump directly to coding. That said, if something is still unclear after you carefully read the lab description, let me know and I will try to fix it. I value student feedback.</li>
+  <li>I strongly advise against a “trial and error” approach when writing the code to draw the lines, circles and triangles. It takes up to a minute each time you build your code and download to the board and this adds up quickly, time-wise. A better approach is to draw a picture of the display and to determine the actual coordinates before writing any code.</li>
+  <li>The sizes of the triangles and circles don’t need to match my picture exactly but they should be reasonably close.</li>
+  <li>If you are having problems programming the board, ensure that the programming jumper is set correctly. I went through all of the boards in the shop and I think that I set all of them but double-check this if you are having problems programming the board. The jumper needs to placed over the rightmost two pins as shown in the picture below.</li>
+  <li>The main.c file contains a function called isr_function(). You will not use this function for this lab but it must be defined or you will get a linker error. You will do more with this function in later labs.</li>
+</ul>
+
+<p><img src="/ecen330/media/lab1/jumper_setting.jpg" alt="Jumper settings for Zybo board" /></p>
+
+
+    </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ecen330/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>
